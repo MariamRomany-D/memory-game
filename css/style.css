@@ -1,0 +1,128 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+body
+{
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(222,26,96,1) 19%, rgba(72,70,185,1) 86%);
+}
+/* ------------------------------------------------[ Game Title ]------------------------- */
+.memoryGameTitle
+{
+    width: 100vw;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.caption 
+{
+    margin-top: 40px;
+    color: rgb(236, 234, 234);
+    font-size: 30px;
+}
+.sco
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.caption h4 
+{
+    background-color: rgba(136, 134, 134, 0.541);
+    padding: 10px;
+    border-radius: 10px;
+    width: 40%;
+    text-align: center;
+}
+.restart
+{
+    cursor: pointer;
+}
+/* ---------------------------------------------------[ Game Cards ]--------------------------- */
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.memoryGame
+{    
+    width: 450px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    gap: 30px;
+    
+
+}
+.memoryGame img 
+{
+    width: 100%;
+}
+.memoryCard
+{
+    cursor: pointer;
+    border-radius: 10px ;
+    position: relative;
+    transition: transform .5s;
+    transform-style: preserve-3d ;   
+}
+.rotate{
+    transform: rotateY(180deg); 
+
+}
+.memoryCard:active
+{
+    transform: scale(.97);
+    transition: transform .2s ;
+}
+.memoryCard.flip{
+    transform: rotateY(180deg);
+}
+.memoryCard .faceOne
+{
+     border-radius: 10px ;
+     transform: rotateY(180deg);
+}
+
+.memoryCard.st {
+    background-color: beige;
+    height: 90px;
+    border-radius: 10px ;
+}
+.memoryCard.addBackround{
+    background-color: rgb(174, 7, 7);
+    text-shadow: 0 0 150 rgb(174, 7, 7);
+    animation: flash .5s  linear ; 
+}
+
+.faceOne,
+.fachTowQ{
+    position: absolute;
+    backface-visibility : hidden;
+    box-shadow: -8px -9px 5px 0px rgba(0,0,0,0.51);
+    -webkit-box-shadow: -8px -9px 5px 0px rgba(0,0,0,0.51);
+    -moz-box-shadow: -8px -9px 5px 0px rgba(0,0,0,0.51);
+    border-radius: 10px ;
+  
+}
+
+
+@keyframes flash{
+    from{opacity: 0}
+    to{opacity: 1}
+}
+
+
+
+
+
+
